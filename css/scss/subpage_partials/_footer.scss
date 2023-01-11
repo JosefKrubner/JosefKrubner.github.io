@@ -1,0 +1,43 @@
+footer.main-footer {
+    // position: absolute;
+    // bottom: 0;
+
+    width: 100%;
+    // font-size: $font-size-secondary;
+    height: 3em;
+
+    background-color: $background-color-darker;
+
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+
+        .footer-nav {
+            .nav-item {
+                padding: .5em;
+
+                transition: color 500ms;
+
+                &:hover {
+                    color: $color-hover;
+                }
+            }
+        }
+
+        .socials {
+            .socials-item {
+                font-size: 2em;
+                padding: .25em;
+                cursor: pointer;
+
+                transition: color 500ms;
+
+                &:hover {
+                    color: $color-hover;
+                }
+            }
+        }
+    }
+}

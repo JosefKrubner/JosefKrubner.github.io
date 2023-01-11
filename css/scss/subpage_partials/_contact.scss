@@ -1,0 +1,164 @@
+#kontakt {
+
+    .content-wrapper {
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
+    a.map-wrapper {
+        width: 50%;
+        display: block;
+        position: relative;
+
+        img.map {
+            width: 100%;
+        }
+
+        img.location-dot {
+            position: absolute;
+            
+            width: 5%;
+            left: 69.75%;
+            top: 63.5%;
+            // filter: brightness(0) saturate(100%) invert(73%) sepia(4%) saturate(198%) hue-rotate(169deg) brightness(85%) contrast(82%);
+            filter: brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(436%) hue-rotate(3deg) brightness(89%) contrast(93%);
+        }
+
+        &:hover {
+            img.location-dot {
+                filter: brightness(0) saturate(100%) invert(35%) sepia(81%) saturate(394%) hue-rotate(342deg) brightness(93%) contrast(95%);
+                width: 7.5%;
+                left: 68.5%;
+                top: 60%;
+            }    
+        }
+    }
+
+    .map-address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            font-weight: 700;
+            font-size: calc(1.5 * $font-size-header);
+        }
+
+        h3 {
+            // font-weight: 700;
+            font-size: calc(1.25 * $font-size-header);
+        }
+    }
+
+    .legal-info {
+        z-index: 10;
+    }
+
+    .contact-ways, .socials {
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        font-size: calc(1.25 * $font-size-header);
+
+        i {
+            font-size: 1.2em;
+            padding: .5em;
+        }
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+
+        // z-index: 10;
+
+        // border: .25rem solid transparentize($background-color-light,  .9);
+        border: .1rem solid transparentize($background-color-light,  .9);
+        border-radius: 1rem;
+        box-shadow: 0 0 .7rem 0 $color-dark;
+        // box-shadow: 0 0 .7rem 0 transparentize($color-light, .8);
+        padding: 2rem 1.5rem;
+
+        width: 80%;
+        max-width: 600px;
+
+        gap: 1rem;
+
+
+        label.input-group {
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+            width: 100%;
+
+            .field-name {
+                font-weight: 300;
+            }
+
+            input, textarea {
+                font-size: 1.25em;
+                padding: .5em;
+                background-color: transparentize($background-color-light,  .9);
+                color: $color-light;
+                // border: none;
+                border: .05em solid transparent;
+                outline: none;
+                flex-basis: 100%;
+                border-radius: .25em;
+                font-family: $font-family;
+                font-weight: 300;
+
+                transition: border 500ms, box-shadow 500ms;
+
+                &:focus {
+                    // box-shadow: 0 0 0 .05em $color-light;
+                    box-shadow: 0 0 .75rem 0 $color-dark;
+                    border: .05em solid transparentize($background-color-light,  .5);
+                }
+            }
+
+            textarea {
+                // width: 100px;
+                resize: none;
+
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            .error {
+                color: $color-error;
+                font-size: $font-size-caption;
+            }
+        }
+
+        .login-button {
+            padding: .5em 1em;
+            font-size: $font-size-header;
+            font-family: $font-family;
+            font-weight: 300;
+            color: $color-light;
+            background-color: transparentize($background-color-light,  .9);
+            border: .05em solid transparent;
+            outline: none;
+            border-radius: .25em;
+            cursor: pointer;
+
+            transition: box-shadow 500ms, background-color 500ms, border 500ms;
+
+            &:hover {
+                box-shadow: 0 0 .75rem 0 $color-dark;
+                background-color: transparentize($color-hover,  .5);
+                border: .05em solid transparentize($background-color-light,  .5);
+            }
+        }
+
+    }
+}

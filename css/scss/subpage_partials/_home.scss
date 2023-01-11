@@ -1,0 +1,57 @@
+#domu {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    background-image: url("/img/landing-background.jpg");
+    background-size: cover;
+
+    .page-title {
+        font-size: calc(3.75*$font-size-header);
+        text-transform: uppercase;
+        font-weight: 200;
+        letter-spacing: .1em;
+        // border: 1px solid $color-light;
+        // line-height: 1em;
+    }
+
+    .division {
+        font-size: calc(1.1*$font-size-header);
+        // border: 1px solid $color-light;
+    }
+
+    .page-subtitle {
+        font-size: calc(1.1*$font-size-header);
+        text-transform: uppercase;
+        font-weight: 200;
+        letter-spacing: .1em;
+        // border: 1px solid $color-light;
+        // line-height: 1em;
+    }
+
+    .mouse {
+        position: absolute;
+        font-size: calc(1.5*$font-size-header);
+
+        bottom: 0;
+        padding: .25em;
+        width: 2em;
+        height: auto;
+        left: calc(50% - 1em);
+        font-family: FontAwesome;
+
+        i {
+            width: 100%;
+            height: 100%;
+        }
+
+        // z-index: 100;
+
+    }
+
+
+}
