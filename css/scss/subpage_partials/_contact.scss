@@ -14,6 +14,9 @@
 
         img.map {
             width: 100%;
+            border-radius: 1rem;
+
+            transition: box-shadow 500ms;
         }
 
         img.location-dot {
@@ -24,6 +27,8 @@
             top: 63.5%;
             // filter: brightness(0) saturate(100%) invert(73%) sepia(4%) saturate(198%) hue-rotate(169deg) brightness(85%) contrast(82%);
             filter: brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(436%) hue-rotate(3deg) brightness(89%) contrast(93%);
+
+            transition: width 500ms, left 500ms, top 500ms;
         }
 
         &:hover {
@@ -33,6 +38,10 @@
                 left: 68.5%;
                 top: 60%;
             }    
+
+            img.map {
+                box-shadow: 0 0 1.5rem 0 $color-dark;
+            }
         }
     }
 
@@ -78,9 +87,10 @@
         // z-index: 10;
 
         // border: .25rem solid transparentize($background-color-light,  .9);
-        border: .1rem solid transparentize($background-color-light,  .9);
+        // border: .1rem solid transparentize($background-color-light,  .9);
         border-radius: 1rem;
         box-shadow: 0 0 .7rem 0 $color-dark;
+        background-color: $background-color-dark;
         // box-shadow: 0 0 .7rem 0 transparentize($color-light, .8);
         padding: 2rem 1.5rem;
 
