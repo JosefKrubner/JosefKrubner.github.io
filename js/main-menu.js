@@ -15,6 +15,7 @@ expandBtn.addEventListener("click", function() {
 window.addEventListener("click", function(event) {
     if (event.target == mainMenu || event.target.parentNode == mainNav) {
         mainMenu.style.display = "none";
+        expandBtn.checked = false;
     }
 })
 

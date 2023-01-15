@@ -2,6 +2,7 @@ body {
     background: linear-gradient(90deg, $background-color-darker, $background-color-dark);
     font-family: $font-family;
     font-size: $font-size-default;
+    font-weight: 300;
     color: $color-light;
 
     &::-webkit-scrollbar {
@@ -33,20 +34,25 @@ section {
         // font-family: $font-family;
         text-transform: uppercase;
         font-size: calc(1.75 * $font-size-header);
-        font-weight: 800;
+        font-weight: 400;
         padding: .5em;
         background-color: transparentize($background-color-light, .0);
         color: $color-dark;
         margin: 1rem 0;
     }
 
-    h2.content-subheader {
+    .content-subheader {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
         text-align: center;
         // font-family: $font-family;
         text-transform: uppercase;
         font-size: calc(1.5 * $font-size-header);
-        font-weight: 600;
+        font-weight: 400;
         padding: .5em;
         // background-color: $background-color-light;
         // color: $color-dark;
@@ -54,6 +60,46 @@ section {
 
         border-top: .1em solid $color-light;
         border-bottom: .1em solid $color-light;
+    }
+
+    .expand-btn {
+        appearance: none;
+    }
+
+    h3.content-section {
+        width: 100%;
+        text-align: left;
+        // font-family: $font-family;
+        text-transform: uppercase;
+        font-size: calc(1.25 * $font-size-header);
+        font-weight: 400;
+        padding: .5em;
+        border-bottom: .05em solid $color-light;
+        margin: 1rem 0;
+    }
+
+}
+
+.expandable {
+    margin-bottom: 2.5rem;
+
+    .content-subheader {
+        cursor: pointer;
+
+        transition: color 500ms, border-color 500ms;
+
+        &:hover {
+            color: $color-hover;
+
+            border-color: $color-hover;
+        }
+    }
+
+    &:has(.content-subheader .expand-btn:not(:checked)) {
+        .content-wrapper {
+            opacity: 0;
+            display: none!important;
+        }
     }
 }
 
@@ -66,7 +112,8 @@ section {
     justify-content: space-around;
     padding: 0 2.5rem;
     gap: 2rem;
-    // z-index: 10;
+    opacity: 1;
+    transition: opacity 1000ms ease-in-out;
 
     h2 {
         font-size: calc(1.1 * $font-size-header);
