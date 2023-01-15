@@ -3,6 +3,62 @@ section#o-mne {
         margin-top: 0;
     }
 
+    .about-text {
+        display: block;
+
+        .about-image {
+            width: 90%;
+            max-width: calc($max-content-width * 0.3);
+            height: calc($max-content-width * 0.4);
+            object-fit: cover;
+            border-radius: 1rem;
+    
+            &.float-left {
+                float: left;
+            }
+
+            &.float-right {
+                float: right;
+            }
+
+            margin: 1rem;
+        }
+    }
+
+    .education-item {
+        background-color: $background-color-dark;
+        padding: 1rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        // gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .kurzy, .seminare, .literatura {
+        justify-content: center;
+        .education-item {
+            // width: 90%;
+            // max-width: calc(.45 * $max-content-width);
+
+            // height: 100%;
+
+            span {
+                padding: 1em;
+            }
+
+            .title {
+                border-right: .05em solid $color-light;
+            }
+
+            .date {
+                border-left: .05em solid $color-light;
+            }
+        }
+    }
+
     .heard-item, iframe {
         width: 90%;
         max-width: calc($max-content-width * 0.45);
@@ -10,11 +66,15 @@ section#o-mne {
     }
 
     .heard-item {
-        background-color: $background-color-dark!important; 
+        background-color: $background-color-dark; 
         padding: 2rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
+        &.future {
+            background-color: $color-hover;
+        }
 
         .type {
             background-color: $background-color-light;

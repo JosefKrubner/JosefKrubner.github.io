@@ -135,6 +135,7 @@ body {
   background: linear-gradient(90deg, #020401, #082010);
   font-family: Mukta;
   font-size: 21px;
+  font-weight: 300;
   color: #CDC5B4;
   min-height: 100vh;
 }
@@ -162,22 +163,58 @@ section h1.content-header {
   text-align: center;
   text-transform: uppercase;
   font-size: 49px;
-  font-weight: 800;
+  font-weight: 400;
   padding: 0.5em;
   background-color: #cdc5b4;
   color: #020401;
   margin: 1rem 0;
 }
-section h2.content-subheader {
+section .content-subheader {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
   font-size: 42px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 0.5em;
   margin: 1rem 0;
   border-top: 0.1em solid #CDC5B4;
   border-bottom: 0.1em solid #CDC5B4;
+}
+section .expand-btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+section h3.content-section {
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 400;
+  padding: 0.5em;
+  border-bottom: 0.05em solid #CDC5B4;
+  margin: 1rem 0;
+}
+
+.expandable {
+  margin-bottom: 2.5rem;
+}
+.expandable .content-subheader {
+  cursor: pointer;
+  transition: color 500ms, border-color 500ms;
+}
+.expandable .content-subheader:hover {
+  color: #99582A;
+  border-color: #99582A;
+}
+.expandable:has(.content-subheader .expand-btn:not(:checked)) .content-wrapper {
+  opacity: 0;
+  display: none !important;
 }
 
 .content-wrapper {
@@ -189,6 +226,8 @@ section h2.content-subheader {
   justify-content: space-around;
   padding: 0 2.5rem;
   gap: 2rem;
+  opacity: 1;
+  transition: opacity 1000ms ease-in-out;
 }
 .content-wrapper h2 {
   font-size: 30.8px;
@@ -337,17 +376,60 @@ header.main-header .header-modal .content-wrapper nav.main-nav a.nav-item .fa-ho
 section#o-mne h1.content-header {
   margin-top: 0;
 }
+section#o-mne .about-text {
+  display: block;
+}
+section#o-mne .about-text .about-image {
+  width: 90%;
+  max-width: 576px;
+  height: 768px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+section#o-mne .about-text .about-image.float-left {
+  float: left;
+}
+section#o-mne .about-text .about-image.float-right {
+  float: right;
+}
+section#o-mne .education-item {
+  background-color: #082010;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section#o-mne .kurzy, section#o-mne .seminare, section#o-mne .literatura {
+  justify-content: center;
+}
+section#o-mne .kurzy .education-item span, section#o-mne .seminare .education-item span, section#o-mne .literatura .education-item span {
+  padding: 1em;
+}
+section#o-mne .kurzy .education-item .title, section#o-mne .seminare .education-item .title, section#o-mne .literatura .education-item .title {
+  border-right: 0.05em solid #CDC5B4;
+}
+section#o-mne .kurzy .education-item .date, section#o-mne .seminare .education-item .date, section#o-mne .literatura .education-item .date {
+  border-left: 0.05em solid #CDC5B4;
+}
 section#o-mne .heard-item, section#o-mne iframe {
   width: 90%;
   max-width: 864px;
   border-radius: 1rem;
 }
 section#o-mne .heard-item {
-  background-color: #082010 !important;
+  background-color: #082010;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+section#o-mne .heard-item.future {
+  background-color: #99582A;
 }
 section#o-mne .heard-item .type {
   background-color: #CDC5B4;
