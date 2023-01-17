@@ -66,7 +66,7 @@ section {
         appearance: none;
     }
 
-    h3.content-section {
+    .content-section {
         width: 100%;
         text-align: left;
         // font-family: $font-family;
@@ -76,14 +76,20 @@ section {
         padding: .5em;
         border-bottom: .05em solid $color-light;
         margin: 1rem 0;
-    }
 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .expandable {
     margin-bottom: 2.5rem;
+    width: 100%;
 
-    .content-subheader {
+    .content-subheader, .content-section {
         cursor: pointer;
 
         transition: color 500ms, border-color 500ms;
@@ -95,15 +101,32 @@ section {
         }
     }
 
-    &:has(.content-subheader .expand-btn:not(:checked)) {
+    &:has(.content-subheader .expand-btn:not(:checked)), &:has(.content-section .expand-btn:not(:checked)) {
+        .expand-arrow::before {
+            content: "\f078";;
+        }
+
         .content-wrapper {
             opacity: 0;
-            display: none!important;
+            // display: none!important;
+            height: 0;
+            overflow-y: hidden;
         }
+    }
+
+    &:has(.content-subheader .expand-btn:checked), &:has(.content-section .expand-btn:checked) {
+        .expand-arrow::before {
+            content: "\f077";;
+        }
+    }
+
+    .expand-arrow {
+        font-family: FontAwesome;
     }
 }
 
 .content-wrapper {
+    height: auto;
     max-width: $max-content-width;
     margin: 2em auto;
     display: flex;
@@ -113,7 +136,7 @@ section {
     padding: 0 2.5rem;
     gap: 2rem;
     opacity: 1;
-    transition: opacity 1000ms ease-in-out;
+    transition: opacity 1000ms, height 1000ms;
 
     h2 {
         font-size: calc(1.1 * $font-size-header);

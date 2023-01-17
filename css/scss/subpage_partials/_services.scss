@@ -24,6 +24,10 @@
                 .service-item-title {
                     color: $color-hover;
                 }
+
+                .service-item-image {
+                    filter: brightness(100%);
+                }
             }
 
             width: 90%;
@@ -44,7 +48,9 @@
                 width: 100%;
                 margin: 1rem auto;
                 border-radius: 1rem;
-                filter: brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(436%) hue-rotate(3deg) brightness(89%) contrast(93%);
+                filter: brightness(75%);
+
+                transition: filter 500ms;
             }
 
             .service-item-description {

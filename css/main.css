@@ -190,7 +190,7 @@ section .expand-btn {
      -moz-appearance: none;
           appearance: none;
 }
-section h3.content-section {
+section .content-section {
   width: 100%;
   text-align: left;
   text-transform: uppercase;
@@ -199,25 +199,42 @@ section h3.content-section {
   padding: 0.5em;
   border-bottom: 0.05em solid #CDC5B4;
   margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .expandable {
   margin-bottom: 2.5rem;
+  width: 100%;
 }
-.expandable .content-subheader {
+.expandable .content-subheader, .expandable .content-section {
   cursor: pointer;
   transition: color 500ms, border-color 500ms;
 }
-.expandable .content-subheader:hover {
+.expandable .content-subheader:hover, .expandable .content-section:hover {
   color: #99582A;
   border-color: #99582A;
 }
-.expandable:has(.content-subheader .expand-btn:not(:checked)) .content-wrapper {
+.expandable:has(.content-subheader .expand-btn:not(:checked)) .expand-arrow::before, .expandable:has(.content-section .expand-btn:not(:checked)) .expand-arrow::before {
+  content: "\f078";
+}
+.expandable:has(.content-subheader .expand-btn:not(:checked)) .content-wrapper, .expandable:has(.content-section .expand-btn:not(:checked)) .content-wrapper {
   opacity: 0;
-  display: none !important;
+  height: 0;
+  overflow-y: hidden;
+}
+.expandable:has(.content-subheader .expand-btn:checked) .expand-arrow::before, .expandable:has(.content-section .expand-btn:checked) .expand-arrow::before {
+  content: "\f077";
+}
+.expandable .expand-arrow {
+  font-family: FontAwesome;
 }
 
 .content-wrapper {
+  height: auto;
   max-width: 1920px;
   margin: 2em auto;
   display: flex;
@@ -227,7 +244,7 @@ section h3.content-section {
   padding: 0 2.5rem;
   gap: 2rem;
   opacity: 1;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 1000ms, height 1000ms;
 }
 .content-wrapper h2 {
   font-size: 30.8px;
@@ -490,6 +507,9 @@ section#o-mne .heard-item .note {
 #sluzby .content-wrapper .service-item:hover .service-item-title {
   color: #99582A;
 }
+#sluzby .content-wrapper .service-item:hover .service-item-image {
+  filter: brightness(100%);
+}
 #sluzby .content-wrapper .service-item .service-item-title {
   text-align: center;
   text-transform: uppercase;
@@ -501,7 +521,8 @@ section#o-mne .heard-item .note {
   width: 100%;
   margin: 1rem auto;
   border-radius: 1rem;
-  filter: brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(436%) hue-rotate(3deg) brightness(89%) contrast(93%);
+  filter: brightness(75%);
+  transition: filter 500ms;
 }
 #sluzby .content-wrapper .service-item .service-item-description p {
   text-align: justify;
