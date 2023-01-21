@@ -253,7 +253,7 @@ header.main-header .logo {
   height: 160px;
   width: 170px;
   text-align: center;
-  background-image: url("/img/logo-header.png");
+  background-image: url("../img/logo-header.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -275,7 +275,7 @@ header.main-header nav.main-nav .nav-item:hover, header.main-header nav.main-nav
 #domu {
   position: relative;
   height: calc(100vh - 200px);
-  background-image: url("/img/landing-background.jpg");
+  background-image: url("../img/landing-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
