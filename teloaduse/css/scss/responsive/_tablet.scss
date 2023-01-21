@@ -1,0 +1,112 @@
+@media only screen and (max-width: $tablet-breakpoint){
+    // Layout
+
+    body {
+        padding-top: 0;
+    }
+
+    * {
+        scroll-margin: 0;
+    }
+
+    // Header
+    input.menu-expand-btn {
+        display: block;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 50;
+        font-size: 4rem;
+        width: 5rem;
+        text-align: center;
+        padding: .5rem;
+        border-radius: .5rem;
+        appearance: none;
+        font-family: FontAwesome;
+
+        transition: color 1500ms;
+
+        background-color: $background-color-darker;
+
+        color: $color-for-darker;
+    
+    
+        &:hover {
+            color: $color-hover;
+        }
+    
+        &::before {
+            content: "\f0c9";
+        }
+    
+        &:checked::before {
+            content: "\f00d";
+        }
+    }
+
+    header.main-header {
+        height: 100%;       
+        display: none;
+
+        .content-wrapper {
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+
+            nav.main-nav {
+                flex-direction: column;
+            }
+        }
+    }
+
+    input.menu-expand-btn:checked + header.main-header {
+        display: block;
+    }
+
+
+
+
+    // Home
+
+    section#domu {
+        height: 100vh;
+    }
+
+    // About
+
+    section#o-mne {
+        .content-wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .about-text, .about-photo {
+                width: 95%;
+
+            }
+        }
+    }
+
+    // Services
+
+    section#sluzby {
+        .modal-services {
+            .modal-content {
+                margin: 2rem auto;
+                width: calc(100% - 4rem);
+            }
+        }
+    }
+
+    // Contact
+
+    section#kontakt {
+        .contact-form {
+            scroll-margin: 1rem;
+        }
+    }
+
+    //Footer
+}

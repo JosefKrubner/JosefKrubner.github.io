@@ -1,0 +1,782 @@
+@font-face {
+  font-family: "Sorts Mill Goudy";
+  src: url(../fonts/Sorts_Mill_Goudy_Italic.ttf) format("ttf");
+  src: url(../fonts/Sorts_Mill_Goudy_Italic.woff) format("woff");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sorts Mill Goudy";
+  src: url(../fonts/Sorts_Mill_Goudy_Regular.ttf) format("ttf");
+  src: url(../fonts/Sorts_Mill_Goudy_Regular.woff) format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url(../fonts/Mukta-ExtraBold.ttf) format("ttf");
+  src: url(../fonts/Mukta-ExtraBold.woff) format("woff");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url(../fonts/Mukta-Bold.ttf) format("ttf");
+  src: url(../fonts/Mukta-Bold.woff) format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url(../fonts/Mukta-SemiBold.ttf) format("ttf");
+  src: url(../fonts/Mukta-SemiBold.woff) format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url(../fonts/Mukta-Medium.ttf) format("ttf");
+  src: url(../fonts/Mukta-Medium.woff) format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url(../fonts/Mukta-Regular.ttf) format("ttf");
+  src: url(../fonts/Mukta-Regular.woff) format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url(../fonts/Mukta-Light.ttf) format("ttf");
+  src: url(../fonts/Mukta-Light.woff) format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url(../fonts/Mukta-ExtraLight.ttf) format("ttf");
+  src: url(../fonts/Mukta-ExtraLight.woff) format("woff");
+  font-weight: 200;
+}
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, q, blockquote,
+a, p, u, em, i, b, strong, img,
+ol, ul, li,
+form, label, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: middle;
+  color: inherit;
+  text-decoration: none;
+}
+
+article, aside, footer, header, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animateback {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -300px;
+    opacity: 0;
+  }
+}
+@keyframes animateback {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -300px;
+    opacity: 0;
+  }
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: Mukta;
+  font-weight: 300;
+  font-size: 21px;
+  cursor: default;
+}
+body section {
+  width: 100%;
+}
+body section.light {
+  background-color: #FFF;
+  color: #000;
+}
+body section.dark {
+  background-color: #fff6f4;
+  color: #000;
+}
+body .section-header {
+  font-size: 70px;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+body .section-header.for-darker {
+  color: #fff6f4;
+  border-bottom: 0.25rem solid rgba(255, 246, 244, 0.5);
+}
+body .section-header.for-dark {
+  color: #ad7e73;
+  border-bottom: 0.25rem solid rgba(173, 126, 115, 0.5);
+}
+body .section-header.for-light {
+  color: #ad7e73;
+  border-bottom: 0.25rem solid rgba(173, 126, 115, 0.5);
+}
+body .content-wrapper {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+body .btn {
+  padding: 0.75rem 2.5rem;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-width: 0.1rem;
+  border-style: solid;
+  transition: background-color 500ms, border-color 500ms, box-shadow 500ms, font-size 500ms, color 500ms;
+}
+body .btn:hover {
+  box-shadow: 0 0 0.35em 0 #000;
+}
+body .btn.for-darker {
+  background-color: #ad7e73;
+  border-color: #fff6f4;
+}
+body .btn.for-darker:hover {
+  background-color: #ff9991;
+  border-color: #ff9991;
+}
+body .btn.for-dark {
+  background-color: #fff6f4;
+  border-color: #000;
+}
+body .btn.for-dark:hover {
+  background-color: #ff9991;
+  border-color: #ff9991;
+  color: #FFF;
+}
+body .btn.for-light {
+  background-color: #FFF;
+  border-color: #000;
+}
+body .btn.for-light:hover {
+  background-color: #ff9991;
+  border-color: #ff9991;
+  color: #FFF;
+}
+
+body {
+  padding-top: 200px;
+}
+
+* {
+  scroll-margin: 200px;
+}
+
+input.menu-expand-btn {
+  display: none;
+}
+
+header.main-header {
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-weight: 500;
+  background-color: #ad7e73;
+  color: #fff6f4;
+}
+header.main-header input.menu-expand-btn {
+  display: none;
+}
+header.main-header .logo {
+  height: 160px;
+  width: 170px;
+  text-align: center;
+  background-image: url("/img/logo-header.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header.main-header nav.main-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+header.main-header nav.main-nav .nav-item {
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: background-color 500ms;
+}
+header.main-header nav.main-nav .nav-item:hover, header.main-header nav.main-nav .nav-item.active {
+  background-color: #ff9991;
+}
+
+#domu {
+  position: relative;
+  height: calc(100vh - 200px);
+  background-image: url("/img/landing-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #ad7e73;
+  background-blend-mode: multiply;
+}
+#domu .content-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-transform: uppercase;
+}
+#domu .content-wrapper .title {
+  font-size: 98px;
+  letter-spacing: 0.1em;
+}
+#domu .content-wrapper .subtitle {
+  font-size: 25.2px;
+  letter-spacing: 0.1em;
+}
+
+section#o-mne .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+section#o-mne .content-wrapper .about-photo {
+  width: 45%;
+  min-width: 250px;
+  padding: 1rem;
+}
+section#o-mne .content-wrapper .about-photo img {
+  width: 100%;
+  display: block;
+}
+section#o-mne .content-wrapper .about-text {
+  padding: 1rem;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#o-mne .content-wrapper .about-text h1 {
+  font-size: 56px;
+  text-align: center;
+}
+section#o-mne .content-wrapper .about-text h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #ad7e73;
+  font-style: italic;
+}
+section#o-mne .content-wrapper .about-text p {
+  text-align: justify;
+  padding: 0.5rem 0;
+}
+section#o-mne .content-wrapper .about-text p:first-of-type {
+  margin-top: 2rem;
+}
+section#o-mne .content-wrapper .about-text .btn {
+  text-align: center;
+  align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 2rem;
+}
+
+#sluzby .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+#sluzby .content-wrapper .service-item {
+  box-shadow: 0 0 0.7rem 0 #fff6f4;
+  background-color: rgba(173, 126, 115, 0.25);
+  padding: 4rem 3rem;
+  width: 95%;
+  max-width: calc(640px - 1.5rem);
+  text-align: center;
+}
+#sluzby .content-wrapper .service-item .service-item-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  width: 100%;
+  font-size: 42px;
+}
+#sluzby .content-wrapper .service-item .service-item-image {
+  width: 100%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+#sluzby .content-wrapper .service-item .service-item-description {
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+#sluzby .content-wrapper .service-item .service-expand-btn {
+  cursor: pointer;
+}
+#sluzby .modal-services {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 50; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(255, 246, 244, 0.45);
+  background: linear-gradient(90deg, rgba(173, 126, 115, 0.5), rgba(255, 246, 244, 0.5));
+}
+#sluzby .modal-services .modal-content {
+  background-color: #ad7e73;
+  margin: calc(1rem + 200px) auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 95%; /* Could be more or less, depending on screen size */
+  max-width: 1920px;
+  -webkit-animation-name: animatetop;
+          animation-name: animatetop;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#sluzby .modal-services .modal-content .modal-close {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  cursor: pointer;
+  color: #fff6f4;
+}
+#sluzby .modal-services .modal-content .modal-title {
+  font-size: 56px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#sluzby .modal-services .modal-content .modal-subtitle {
+  font-size: 28px;
+  text-align: center;
+  color: #fff6f4;
+  font-style: italic;
+}
+#sluzby .modal-services .modal-content p {
+  text-align: justify;
+  margin: 1rem 0;
+}
+#sluzby .modal-services .modal-content .modal-price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  align-items: center;
+  border: 0.1rem solid #fff6f4;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  padding: 0.75rem 1.5rem;
+  padding-left: 0;
+  font-size: 24px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-start;
+  font-weight: 500;
+  color: #fff6f4;
+}
+#sluzby .modal-services .modal-content .contact-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  color: #fff6f4;
+}
+
+section#cenik .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+section#cenik .content-wrapper .service-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid #ad7e73;
+  padding: 0.75rem 1.5rem;
+  width: 95%;
+  max-width: calc(640px - 1.5rem);
+}
+section#cenik .content-wrapper .service-item:hover {
+  background-color: #fff6f4;
+  cursor: default;
+}
+section#cenik .content-wrapper .service-item .service-title {
+  font-size: 30px;
+}
+section#cenik .content-wrapper .service-item .service-duration {
+  font-size: 24px;
+  font-style: italic;
+}
+section#cenik .content-wrapper .service-item .service-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+section#cenik .content-wrapper .btn {
+  padding: 0.75rem 2.5rem;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-width: 0.1rem;
+  border-style: solid;
+  margin: 1rem;
+  background-color: #FFF;
+  border-color: #000;
+  transition: background-color 500ms, border-color 500ms, box-shadow 500ms, font-size 500ms, color 500ms;
+}
+section#cenik .content-wrapper .btn:hover {
+  box-shadow: 0 0 0.35em 0 #000;
+  background-color: #ff9991;
+  border-color: #ff9991;
+  color: #FFF;
+}
+
+#kontakt .content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+#kontakt .contact-ways, #kontakt .socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 35px;
+}
+#kontakt .contact-ways i, #kontakt .socials i {
+  font-size: 1.2em;
+  padding: 0.5em;
+}
+#kontakt .contact-ways a, #kontakt .socials a {
+  transition: color 500ms;
+}
+#kontakt .contact-ways a:hover, #kontakt .socials a:hover {
+  color: #ff9991;
+}
+#kontakt .contact-form {
+  scroll-margin: calc(200px + 1rem);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.7rem 0 #fff6f4;
+  background-color: rgba(173, 126, 115, 0.25);
+  padding: 2rem 1.5rem;
+  width: 95%;
+  max-width: 864px;
+  gap: 1rem;
+}
+#kontakt .contact-form label.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+#kontakt .contact-form label.input-group .field-name {
+  font-weight: 300;
+}
+#kontakt .contact-form label.input-group input, #kontakt .contact-form label.input-group textarea {
+  font-size: 1.25em;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border: 0.05em solid transparent;
+  outline: none;
+  flex-basis: 100%;
+  border-radius: 0.25em;
+  font-family: Mukta;
+  font-weight: 300;
+  transition: border 500ms, box-shadow 500ms;
+}
+#kontakt .contact-form label.input-group input:focus, #kontakt .contact-form label.input-group textarea:focus {
+  box-shadow: 0 0 0.75rem 0 #ad7e73;
+  border: 0.05em solid rgba(255, 255, 255, 0.5);
+}
+#kontakt .contact-form label.input-group textarea {
+  resize: none;
+  overflow-y: scroll;
+}
+#kontakt .contact-form label.input-group textarea::-webkit-scrollbar {
+  display: none;
+}
+#kontakt .contact-form label.input-group .error {
+  color: #dd6363;
+  font-size: 15px;
+}
+#kontakt .contact-form .login-button {
+  padding: 0.5em 1em;
+  font-size: 28px;
+  font-family: Mukta;
+  font-weight: 300;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.05em solid transparent;
+  outline: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: box-shadow 500ms, background-color 500ms, border 500ms;
+}
+#kontakt .contact-form .login-button:hover {
+  box-shadow: 0 0 0.75rem 0 #fff6f4;
+  background-color: rgba(255, 153, 145, 0.5);
+  border: 0.05em solid rgba(255, 255, 255, 0.5);
+}
+
+footer.main-footer {
+  width: 100%;
+  background-color: #ad7e73;
+  color: #fff6f4;
+  font-size: 17px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer.main-footer nav.footer-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+footer.main-footer nav.footer-nav a.nav-item {
+  padding: 1rem 0.5rem;
+  transition: color 500ms;
+}
+footer.main-footer nav.footer-nav a.nav-item:hover {
+  color: #ff9991;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding-top: 0;
+  }
+  * {
+    scroll-margin: 0;
+  }
+  input.menu-expand-btn {
+    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 50;
+    font-size: 4rem;
+    width: 5rem;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    font-family: FontAwesome;
+    transition: color 1500ms;
+    background-color: #ad7e73;
+    color: #fff6f4;
+  }
+  input.menu-expand-btn:hover {
+    color: #ff9991;
+  }
+  input.menu-expand-btn::before {
+    content: "\f0c9";
+  }
+  input.menu-expand-btn:checked::before {
+    content: "\f00d";
+  }
+  header.main-header {
+    height: 100%;
+    display: none;
+  }
+  header.main-header .content-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  header.main-header .content-wrapper nav.main-nav {
+    flex-direction: column;
+  }
+  input.menu-expand-btn:checked + header.main-header {
+    display: block;
+  }
+  section#domu {
+    height: 100vh;
+  }
+  section#o-mne .content-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section#o-mne .content-wrapper .about-text, section#o-mne .content-wrapper .about-photo {
+    width: 95%;
+  }
+  section#sluzby .modal-services .modal-content {
+    margin: 2rem auto;
+    width: calc(100% - 4rem);
+  }
+  section#kontakt .contact-form {
+    scroll-margin: 1rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  body .section-header {
+    font-size: 57.5px;
+  }
+  body .btn {
+    font-size: 19px;
+  }
+  input.menu-expand-btn {
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    width: 3.5rem;
+  }
+  section#domu .content-wrapper .title {
+    font-size: 80.5px;
+    text-align: center;
+    word-spacing: 100vw;
+    line-height: 1em;
+  }
+  section#domu .content-wrapper .subtitle {
+    font-size: 20.7px;
+  }
+  section#o-mne .content-wrapper .about-text, section#o-mne .content-wrapper .about-photo {
+    width: 100%;
+  }
+  section#o-mne .content-wrapper .about-text h1 {
+    font-size: 46px;
+  }
+  section#o-mne .content-wrapper .about-text h2 {
+    font-size: 23px;
+  }
+  section#sluzby .content-wrapper .service-item {
+    width: 97.5%;
+    padding: 2rem 1.5rem;
+  }
+  section#sluzby .content-wrapper .service-item .service-item-title {
+    font-size: 34.5px;
+  }
+  section#sluzby .modal-services .modal-content {
+    margin: 1rem auto;
+    width: calc(100% - 2rem);
+  }
+  section#sluzby .modal-services .modal-content .modal-title {
+    font-size: 46px;
+  }
+  section#sluzby .modal-services .modal-content .modal-subtitle {
+    font-size: 23px;
+  }
+  section#sluzby .modal-services .modal-content .modal-price {
+    font-size: 19px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  section#sluzby .modal-services .modal-content .modal-price .service-title {
+    text-align: left;
+  }
+  section#sluzby .modal-services .modal-content .modal-price .service-price-duration {
+    text-align: left;
+  }
+  section#kontakt .content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  section#kontakt .contact-ways, section#kontakt .socials {
+    font-size: 28.75px;
+  }
+  section#kontakt .contact-form {
+    scroll-margin: 1rem;
+    align-self: center;
+  }
+  section#kontakt .contact-form .error {
+    font-size: 10px;
+  }
+  section#kontakt .login-button {
+    font-size: 23px;
+  }
+}/*# sourceMappingURL=main.css.map */

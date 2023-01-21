@@ -1,0 +1,139 @@
+@media only screen and (max-width: $mobile-breakpoint){
+    
+    // Layout
+
+    body {
+        font-size: $font-size-mobile-default;
+
+        .section-header {
+            font-size: calc(2.5*$font-size-mobile-header);
+        }
+
+        .btn {
+            font-size: $font-size-mobile-section;
+        }
+    }
+
+    // Header
+    input.menu-expand-btn {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2.5rem;
+        width: 3.5rem;
+    }
+
+
+
+
+    // Home
+
+    section#domu {
+        .content-wrapper {
+            .title {
+                font-size: calc($font-size-mobile-header * 3.5);
+                text-align: center;
+                word-spacing: 100vw;
+                line-height: 1em;
+            }
+    
+            .subtitle {
+                font-size: calc($font-size-mobile-header * .9);
+            }
+        }
+    }
+
+    // About
+
+    section#o-mne {
+        .content-wrapper {
+            .about-text, .about-photo {
+                width: 100%;
+
+            }
+
+            .about-text {
+                h1 {
+                    font-size: calc(2*$font-size-mobile-header);
+                }
+    
+                h2 {
+                    font-size: calc(1*$font-size-mobile-header);
+                }
+            }
+        }
+    }
+
+    // Services
+
+    section#sluzby {
+        .content-wrapper {
+            .service-item {
+                width: 97.5%;
+                padding: 2rem 1.5rem;
+
+                .service-item-title {
+                    font-size: calc(1.5*$font-size-mobile-header);
+                }
+            }
+        }
+
+        .modal-services {
+            .modal-content {
+                margin: 1rem auto;
+                width: calc(100% - 2rem);
+
+                .modal-title {
+                    font-size: calc(2*$font-size-mobile-header);
+                }
+    
+                .modal-subtitle {
+                    font-size: calc(1*$font-size-mobile-header);
+                }
+
+                .modal-price {
+                    font-size: calc(1* $font-size-mobile-section);
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    .service-title {
+                        text-align: left;
+                    }
+
+                    .service-price-duration {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    // Contact
+
+    section#kontakt {
+        .content-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .contact-ways, .socials {    
+            font-size: calc(1.25 * $font-size-mobile-header);
+    
+        }
+
+        .contact-form {
+            scroll-margin: 1rem;
+            align-self: center;
+
+            .error {
+                font-size: $font-size-mobile-caption;
+            }
+        }
+
+        .login-button {
+            font-size: $font-size-mobile-header;            
+        }
+    }
+
+    //Footer
+}

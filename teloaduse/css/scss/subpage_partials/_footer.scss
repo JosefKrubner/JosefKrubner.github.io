@@ -1,0 +1,29 @@
+footer.main-footer {
+    width: 100%;
+    background-color: $background-color-darker;
+    color: $color-for-darker;
+    font-size: $font-size-secondary;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    nav.footer-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        
+        a.nav-item {
+            padding: 1rem .5rem;
+
+            transition: color 500ms;
+
+            &:hover {
+                color: $color-hover;
+            }
+        }
+    }
+
+
+}

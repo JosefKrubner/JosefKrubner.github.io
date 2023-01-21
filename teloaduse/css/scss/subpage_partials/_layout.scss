@@ -1,0 +1,116 @@
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: Mukta;
+    font-weight: 300;
+    font-size: $font-size-default;
+
+    cursor: default;
+
+    section {
+        width: 100%;
+
+        &.light {
+            background-color: $background-color-light;
+            color: $color-for-light;
+        }
+
+        &.dark {
+            background-color: $background-color-dark;
+            color: $color-for-dark;
+        }
+    }
+
+    .section-header {
+
+        font-size: calc(2.5*$font-size-header);
+        // text-transform: uppercase;
+        width: 100%;
+        max-width: $max-content-width;
+        margin: 0 auto;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+
+
+        &.for-darker {
+            color: $color-for-darker;
+            border-bottom: .25rem solid transparentize($color-for-darker, .5);
+        }
+
+        &.for-dark {
+            color: $background-color-darker;
+            border-bottom: .25rem solid transparentize($background-color-darker, .5);
+        }
+
+        &.for-light {
+            color: $background-color-darker;     
+            border-bottom: .25rem solid transparentize($background-color-darker, .5);       
+        }
+    }
+
+    .content-wrapper {
+        width: 100%;
+        max-width: $max-content-width;
+        height: auto;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        
+    }
+
+    .btn {
+        padding: .75rem 2.5rem;
+        font-size: $font-size-section;
+
+        text-transform: uppercase;
+
+        border-width: .1rem;
+        border-style: solid;
+
+        transition: background-color 500ms, border-color 500ms, box-shadow 500ms, font-size 500ms, color 500ms;
+
+        &:hover {
+            box-shadow: 0 0 .35em 0 #000;
+        }
+        
+        &.for-darker {
+            background-color: $background-color-darker;
+            border-color: $color-for-darker;
+
+            &:hover {
+                background-color: $color-hover;
+                border-color: $color-hover; 
+            }
+        }
+
+        &.for-dark {
+            background-color: $background-color-dark;
+            border-color: $color-for-dark;
+
+            &:hover {
+                background-color: $color-hover;
+                border-color: $color-hover; 
+                color: $background-color-light; 
+            }
+        }
+
+        &.for-light {
+            background-color: $background-color-light;
+            border-color: $color-for-light;
+
+            &:hover {
+                background-color: $color-hover;
+                border-color: $color-hover;
+                color: $background-color-light; 
+            }
+        }
+    }
+}
