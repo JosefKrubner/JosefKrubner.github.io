@@ -28,19 +28,22 @@
 
         // background-color: $background-color-darker;
 
-        color: $color-for-darker;
+        color: $background-color-darker;
     
     
-        &:hover {
-            color: $color-hover;
-        }
+        // &:hover {
+        //     color: $color-hover;
+        // }
     
         &::before {
             content: "\f0c9";
         }
     
-        &:checked::before {
-            content: "\f00d";
+        &:checked {
+            color: $color-for-darker;
+            &::before {
+                content: "\f00d";
+            }
         }
     }
 

@@ -651,13 +651,13 @@ footer.main-footer nav.footer-nav a.nav-item:hover {
             appearance: none;
     font-family: FontAwesome;
     transition: color 1500ms;
-    color: #fff6f4;
-  }
-  input.menu-expand-btn:hover {
-    color: #ff9991;
+    color: #ad7e73;
   }
   input.menu-expand-btn::before {
     content: "\f0c9";
+  }
+  input.menu-expand-btn:checked {
+    color: #fff6f4;
   }
   input.menu-expand-btn:checked::before {
     content: "\f00d";
