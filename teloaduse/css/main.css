@@ -651,7 +651,6 @@ footer.main-footer nav.footer-nav a.nav-item:hover {
             appearance: none;
     font-family: FontAwesome;
     transition: color 1500ms;
-    background-color: #ad7e73;
     color: #fff6f4;
   }
   input.menu-expand-btn:hover {
