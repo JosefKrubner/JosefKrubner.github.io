@@ -32,10 +32,30 @@
                 // font-style: italic;
             }
 
-            .service-item-image {
+            .service-item-image-wrapper {
                 width: 100%;
+                height: fit-content;
                 margin: 1rem auto;
-                border-radius: 1rem;
+                // border-radius: 1rem;
+                position: relative;
+
+                .service-item-image {
+                    z-index: 1;
+                    width: 100%;
+                    border-radius: 50%;
+                    aspect-ratio: 1 / 1;
+                }
+
+                .service-item-border {
+                    z-index: 2;
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    position: absolute;
+                    top:0;
+                    left: 0;
+
+                }
+
             }
 
             .service-item-description {
