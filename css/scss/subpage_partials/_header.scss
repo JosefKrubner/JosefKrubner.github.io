@@ -125,6 +125,11 @@ header.main-header {
                         text-align: center;
                         padding: .5em
                     }
+
+                    &.nav-item-active {
+                        cursor: default;
+                        color: $color-hover;
+                    }
                 }
             }
         }

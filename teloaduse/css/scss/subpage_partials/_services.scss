@@ -29,6 +29,8 @@
                 font-weight: 300;
                 width: 100%;
                 font-size: calc(1.5*$font-size-header);
+                line-height: 1.2em;
+                height: 2.4em;
                 // font-style: italic;
             }
 
@@ -61,6 +63,9 @@
             .service-item-description {
                     text-align: justify;
                     margin-bottom: 2rem;
+
+                    line-height: 1.6em;
+                    height: 8em;
             }
 
             .service-expand-btn {

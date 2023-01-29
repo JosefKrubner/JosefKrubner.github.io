@@ -348,6 +348,10 @@ header.main-header .header-modal .content-wrapper nav.main-nav a.nav-item .fa-ho
   text-align: center;
   padding: 0.5em;
 }
+header.main-header .header-modal .content-wrapper nav.main-nav a.nav-item.nav-item-active {
+  cursor: default;
+  color: #99582A;
+}
 
 #domu {
   position: relative;
@@ -480,6 +484,25 @@ section#o-mne .heard-item .note {
   width: 100%;
   border-top: 0.1rem solid #CDC5B4;
   padding: 1rem 0;
+}
+section#o-mne .more-about-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(8, 32, 16, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#o-mne .more-about-modal .more-about-frame {
+  display: block;
+  width: 1920px;
+  max-width: 95%;
+  height: 95%;
 }
 
 #sluzby .content-wrapper {

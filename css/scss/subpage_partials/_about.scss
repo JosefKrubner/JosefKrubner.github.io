@@ -114,4 +114,28 @@ section#o-mne {
         }
     }
 
+    .more-about-modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        // display: block;
+        z-index: 100;
+        width: 100vw;
+        height: 100vh;
+        
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: transparentize($background-color-dark, .05);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .more-about-frame {
+            display: block;
+            width: $max-content-width;
+            max-width: 95%;
+            height: 95%;
+        }
+    }
+
 }
