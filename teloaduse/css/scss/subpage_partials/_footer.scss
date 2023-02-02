@@ -8,6 +8,21 @@ footer.main-footer {
     flex-direction: column;
     gap: 1rem;
 
+    .documents {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        a {
+            padding: .25rem;
+            transition: color 500ms;
+            &:hover {
+                color: $color-hover!important;
+            }
+        }
+    }
+
     nav.footer-nav {
         display: flex;
         flex-direction: row;

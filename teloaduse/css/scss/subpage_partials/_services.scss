@@ -5,9 +5,32 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: stretch;
         gap: .25rem;
         // border: 1px solid black;
         // padding: 1rem;
+
+        .poukaz {
+            width: 100%;
+            max-width: calc(.35 * $max-content-width);
+            transition: max-width 500ms;
+            &:hover, &:focus {
+                max-width: calc(.75 * $max-content-width);
+            }
+        }
+
+        .permanentky {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            p {
+                padding: 1rem;
+                border-radius: .5rem;
+                border: .1rem solid $background-color-darker;
+                text-align: center;
+            }
+        }
 
 
         .service-item {            
@@ -19,6 +42,12 @@
             // padding: 2rem 1.5rem;
             padding: 4rem 3rem;
             width: 95%;
+            // height: fit-content;ˇ
+
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: stretch;
+            // gap: 1rem;
             max-width: calc($max-content-width / 3 - 1.5rem);
             text-align: center;
             // justify-content: space-between;
@@ -30,7 +59,7 @@
                 width: 100%;
                 font-size: calc(1.5*$font-size-header);
                 line-height: 1.2em;
-                height: 2.4em;
+                height: 3.6em;
                 // font-style: italic;
             }
 
@@ -65,7 +94,7 @@
                     margin-bottom: 2rem;
 
                     line-height: 1.6em;
-                    height: 8em;
+                    height: 9.6em;
             }
 
             .service-expand-btn {
