@@ -4,12 +4,19 @@ section#o-mne {
     }
 
     .about-text {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        p {
+            width: 90%;
+            max-width: calc($max-content-width * 0.6);
+        }
 
         .about-image {
             width: 90%;
             max-width: calc($max-content-width * 0.3);
-            height: calc($max-content-width * 0.4);
+            // height: calc($max-content-width * 0.4);
             object-fit: cover;
             border-radius: 1rem;
     

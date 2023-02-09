@@ -70,6 +70,7 @@
 
     <section id="sluzby" class="dark">
         <h1 class="section-header for-dark">Nabídka služeb</h1>
+        <h1 class="section-subheader for-dark">Před objednáním masáže se prosím seznamte s <a href="#" class="bold">kontraindikacemi</a> </h1>
         <div class="content-wrapper">
             <div class="service-item">
                 <h1 class="service-item-title">Sportovní a rekondiční masáž</h1>
@@ -233,76 +234,52 @@
             <p class="content-text">
                 Na veškeré masáže nabízím možnost vystavení <span class="bold">dárkového poukazu</span> na libovolnou částku. Platnost poukazu je 6 měsíců od data vydání.
             </p>
-            <img class="poukaz" src="img/Darkovy_poukaz-1.png" alt="Masáže Karolína Hejnarová – dárkový poukaz">
+            <label class="poukaz" for="poukaz">
+                <img src="img/Darkovy_poukaz-1.png" alt="Masáže Karolína Hejnarová – dárkový poukaz">
+                <input type="checkbox" name="poukaz" id="poukaz">
+            </label>
         </div>
     </section>
-
-    
-
-    <!-- <section id="cenik" class="light">
-        <h1 class="section-header for-light">Ceník služeb</h1>
-        <div class="content-wrapper">
-            <div class="service-item">
-                <h1 class="service-title">Služba 1</h1>
-                <div class="service-duration">45/60/90 minut</div>
-                <div class="service-price">450/600/750 Kč</div>
-            </div>
-
-            <div class="service-item">
-                <h1 class="service-title">Služba 2</h1>
-                <div class="service-duration">45/60/90 minut</div>
-                <div class="service-price">450/600/750 Kč</div>
-            </div>
-
-            <div class="service-item">
-                <h1 class="service-title">Služba 3</h1>
-                <div class="service-duration">45/60/90 minut</div>
-                <div class="service-price">450/600/750 Kč</div>
-            </div>
-
-            <div class="service-item">
-                <h1 class="service-title">Služba 4</h1>
-                <div class="service-duration">45/60/90 minut</div>
-                <div class="service-price">450/600/750 Kč</div>
-            </div>
-
-            <div class="service-item">
-                <h1 class="service-title">Služba 5</h1>
-                <div class="service-duration">45/60/90 minut</div>
-                <div class="service-price">450/600/750 Kč</div>
-            </div>
-
-            <div class="service-item">
-                <h1 class="service-title">Služba 6</h1>
-                <div class="service-duration">45/60/90 minut</div>
-                <div class="service-price">450/600/750 Kč</div>
-            </div>
-            <a href="#kontaktovat" class="btn btn-for-light">Chci se objednat</a>
-        </div>        
-    </section> -->
 
     <section id="kontakt" class="light">
         <h1 class="section-header for-light">Kontakt</h1>
 
+        <h1 class="section-subheader for-light">Kde mě najdete?</h1>
+
+        <div class="content-wrapper">
+            <div class="map-address">
+                <h2>Ordinace fyzioterapie v pasáži Pražská</h2>
+                <h3>Pražská 1616, 252 10 Mníšek pod Brdy</h3>
+            </div>
+            
+            <a class="map-wrapper" href="https://goo.gl/maps/iKPtMibd8dRtGmAT7" target="_blank">
+                <img class="map" src="img/pasaz_prazska.PNG" alt="Pasáž Pražská">
+                <img class="location-dot" src="img/dot-icon.png" alt="Location Dot">
+            </a>            
+        </div>    
+
+        <h1 class="section-subheader for-light">Kontaktní informace</h1>
+
         <div class="content-wrapper">
             <div class="contact-ways">
-                <a href="tel:+420721975320"><i class="fa-solid fa-phone"></i> XXX XXX XXX</a>
+                <a href="tel:+420725514528"><i class="fa-solid fa-phone"></i> +420 725 514 528</a>
                 <a href="mailto:kontakt@teloaduse.cz"><i class="fa-solid fa-envelope"></i> kontakt@teloaduse.cz</a>
             </div>
 
             <div class="socials">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="socials-item fa-brands fa-square-facebook"></i>Facebook?</a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="socials-item fa-brands fa-square-instagram"></i>Instagram?</a>
+                <a href="https://www.facebook.com/profile.php?id=100087503873853" target="_blank" rel="noopener noreferrer"><i class="socials-item fa-brands fa-square-facebook"></i>Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="socials-item fa-brands fa-square-instagram"></i>Instagram</a>
             </div>
 
             <div class="legal-info">
                 <p><span class="bold">Karolína Hejnarová</span></p>
                 <p><span class="bold">IČO:</span> 17912920</p>
-                <p><span class="bold">Sídlo podnikání:</span> U nádraží 306, 252 10 Mníšek pod Brdy</p>
                 <p>Fyzická osoba zapsaná v živnostenském rejstříku od 9. 1. 2023</p>
                 <p><span class="bold">Evidující úřad:</span> Městský úřad Černošice</p>
             </div>
         </div>
+
+        <h1 class="section-subheader for-light">Napište mi</h1>
 
         <div class="content-wrapper">
             <form id="kontaktovat" class="contact-form" action="">
@@ -358,14 +335,12 @@
             <a href="#domu" class="nav-item">Domů</a>
             <a href="#o-mne" class="nav-item">Úvod</a>
             <a href="#sluzby" class="nav-item">Služby</a>
-            <!-- <a href="#cenik" class="nav-item">Ceník</a> -->
-            <!-- <a href="#recenze" class="nav-item">Recenze</a> -->
             <a href="#kontakt" class="nav-item">Kontakt</a>
         </nav>
 
         <div class="documents">
             <a href="obchodni-podminky.html">Obchodní podmínky</a>
-            <a href="#">Zásady zpracování osobních údajů</a>
+            <a href="GDPR.html">Zásady zpracování osobních údajů</a>
         </div>
 
         <div class="copyright">

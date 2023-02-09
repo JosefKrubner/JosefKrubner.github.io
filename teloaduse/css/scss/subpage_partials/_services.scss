@@ -13,10 +13,29 @@
         .poukaz {
             width: 100%;
             max-width: calc(.35 * $max-content-width);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: max-width 500ms;
-            &:hover, &:focus {
-                max-width: calc(.75 * $max-content-width);
+            
+            img {
+                width: 100%;
+                cursor: zoom-in;
             }
+            
+            input {
+                appearance: none;
+            }
+
+            &:has(input:checked) {
+                max-width: calc(.75 * $max-content-width);
+                img {
+                    cursor: zoom-out;
+                }
+            }
+            // &:hover, &:focus {
+            //     max-width: calc(.75 * $max-content-width);
+            // }
         }
 
         .permanentky {
