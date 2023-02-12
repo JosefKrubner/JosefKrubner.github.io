@@ -9,6 +9,9 @@
 
     background-image: url("/img/landing-background.jpg");
     background-size: cover;
+    color: $color-secondary;
+
+    
 
     .page-title {
         font-size: calc(3.75*$font-size-header);

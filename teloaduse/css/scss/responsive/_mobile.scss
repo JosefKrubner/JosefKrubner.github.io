@@ -59,6 +59,10 @@
                 h2 {
                     font-size: calc(1*$font-size-mobile-header);
                 }
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -66,6 +70,9 @@
     // Services
 
     section#sluzby {
+        .kontraindikace {
+            font-size: calc(1.5*$font-size-mobile-header);
+        }
         .content-wrapper {
             .service-item {
                 width: 97.5%;

@@ -2,6 +2,10 @@
     display: none;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .bold {
     font-weight: 700;
 }
@@ -67,6 +71,13 @@ body {
         margin-bottom: 1rem;
         font-weight: 500;
 
+        a {
+            transition: color 500ms;
+
+            &:hover {
+                color: $color-hover;
+            }
+        }
 
         &.for-darker {
             color: $color-for-darker;
@@ -101,6 +112,8 @@ body {
             text-align: justify;
             width: 100%;
             margin: 2rem 0;
+
+            
         }
         
     }

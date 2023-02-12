@@ -5,6 +5,12 @@ $background-color-dark: #082010;
 // $background-color-light: #97999b;
 $background-color-light: #CDC5B4;
 
+$background-primary: $background-color-light;
+$background-secondary: $background-color-dark;
+
+$color-primary: $background-color-darker;
+$color-secondary: $background-color-light;
+
 $color-light: $background-color-light;
 $color-dark: $background-color-darker;
 $color-success: #84DD63;

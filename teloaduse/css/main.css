@@ -114,6 +114,10 @@ a {
   display: none;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .bold {
   font-weight: 700;
 }
@@ -165,6 +169,12 @@ body .section-subheader {
   padding: 0.5rem;
   margin-bottom: 1rem;
   font-weight: 500;
+}
+body .section-subheader a {
+  transition: color 500ms;
+}
+body .section-subheader a:hover {
+  color: #ff9991;
 }
 body .section-subheader.for-darker {
   color: #fff6f4;
@@ -263,6 +273,7 @@ header.main-header .logo {
   background-image: url("../img/logo-header.png");
   background-size: contain;
   background-repeat: no-repeat;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(1%) saturate(2069%) hue-rotate(316deg) brightness(102%) contrast(126%);
 }
 header.main-header nav.main-nav {
   display: flex;
@@ -282,7 +293,7 @@ header.main-header nav.main-nav .nav-item:hover, header.main-header nav.main-nav
 #domu {
   position: relative;
   height: calc(100vh - 200px);
-  background-image: url("../img/landing-background.jpg");
+  background-image: url("../img/home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -315,7 +326,7 @@ section#o-mne .content-wrapper {
   align-items: stretch;
 }
 section#o-mne .content-wrapper .about-photo {
-  width: 45%;
+  width: 35%;
   min-width: 250px;
   padding: 1rem;
 }
@@ -325,7 +336,7 @@ section#o-mne .content-wrapper .about-photo img {
 }
 section#o-mne .content-wrapper .about-text {
   padding: 1rem;
-  width: 55%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -347,6 +358,9 @@ section#o-mne .content-wrapper .about-text p {
 }
 section#o-mne .content-wrapper .about-text p:first-of-type {
   margin-top: 2rem;
+}
+section#o-mne .content-wrapper .about-text img {
+  width: 40%;
 }
 section#o-mne .content-wrapper .about-text .btn {
   text-align: center;
@@ -435,6 +449,7 @@ section#o-mne .content-wrapper .about-text .btn {
   position: absolute;
   top: 0;
   left: 0;
+  filter: brightness(0) saturate(100%) invert(55%) sepia(11%) saturate(1070%) hue-rotate(324deg) brightness(94%) contrast(86%);
 }
 #sluzby .content-wrapper .service-item .service-item-description {
   text-align: justify;
@@ -596,6 +611,7 @@ section#cenik .content-wrapper .btn:hover {
   width: 50%;
   display: block;
   position: relative;
+  align-self: center;
 }
 #kontakt a.map-wrapper img.map {
   width: 100%;
@@ -799,6 +815,9 @@ footer.main-footer nav.footer-nav a.nav-item:hover {
   section#o-mne .content-wrapper .about-text, section#o-mne .content-wrapper .about-photo {
     width: 95%;
   }
+  section#o-mne .content-wrapper .about-text img {
+    width: 80%;
+  }
   section#sluzby .modal-services .modal-content {
     margin: 2rem auto;
     width: calc(100% - 4rem);
@@ -843,6 +862,12 @@ footer.main-footer nav.footer-nav a.nav-item:hover {
   }
   section#o-mne .content-wrapper .about-text h2 {
     font-size: 23px;
+  }
+  section#o-mne .content-wrapper .about-text img {
+    width: 100%;
+  }
+  section#sluzby .kontraindikace {
+    font-size: 34.5px;
   }
   section#sluzby .content-wrapper .service-item {
     width: 97.5%;
