@@ -54,15 +54,14 @@
             width: 10%;
             left: 74.5%;
             top: 57%;
-            // filter: brightness(0) saturate(100%) invert(73%) sepia(4%) saturate(198%) hue-rotate(169deg) brightness(85%) contrast(82%);
-            // filter: brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(436%) hue-rotate(3deg) brightness(89%) contrast(93%);
+            filter: $darker-filter;
 
             transition: width 500ms, left 500ms, top 500ms;
         }
 
         &:hover {
             img.location-dot {
-                filter: brightness(0) saturate(100%) invert(35%) sepia(81%) saturate(394%) hue-rotate(342deg) brightness(93%) contrast(95%);
+                filter: $hover-filter;
                 width: 15%;
                 left: 72%;
                 top: 50.5%;

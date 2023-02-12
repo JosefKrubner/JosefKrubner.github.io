@@ -108,6 +108,8 @@ body {
         align-items: center;
         padding: 1rem;
 
+        transition: flex-direction 500ms;
+
         .content-text {
             text-align: justify;
             width: 100%;

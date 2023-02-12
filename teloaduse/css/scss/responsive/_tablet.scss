@@ -48,11 +48,16 @@
     }
 
     header.main-header {
-        height: 100%;       
-        display: none;
+        // height: 100%;       
+        // display: none;
+        height: 0;
+        opacity: 0;
+
+        transition: opacity 500ms, height 500ms;
 
         .content-wrapper {
             flex-direction: column;
+            flex-wrap: nowrap;
             gap: 2rem;
             justify-content: space-around;
             align-items: center;
@@ -65,7 +70,12 @@
     }
 
     input.menu-expand-btn:checked + header.main-header {
-        display: block;
+        height: 100%;
+        opacity: 1;
+
+        .content-wrapper {
+            flex-direction: column;
+        }
     }
 
 
