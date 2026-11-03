@@ -23,17 +23,16 @@ body{
 a{color:inherit}
 :focus-visible{outline:3px solid var(--green);outline-offset:3px}
 
-/* identita: fotka má vždy šířku jména */
+/* identita: fotka má vždy přesně šířku jména */
 main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1.5rem;text-align:center}
 .identity{width:fit-content;max-width:100%}
 .portrait{
-  /* width:0 + min-width:100% = fotka šířku bloku nijak neovlivňuje, jen ji přebírá od jména */
+  /* width:0 + min-width:100% = fotka šířku bloku neovlivňuje, přebírá ji od jména */
   width:0;min-width:100%;aspect-ratio:1/1;margin:0 0 1.75rem;
   background:var(--green-soft);border-radius:var(--shape) 0 var(--shape) 0;overflow:hidden;
-  display:grid;place-items:center;container-type:inline-size;
+  display:block;
 }
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
-.portrait span{font-size:30cqw;font-weight:800;color:var(--green);opacity:.25;letter-spacing:-.04em}
 
 h1{
   margin:0;white-space:nowrap;font-weight:800;color:var(--green);
@@ -41,12 +40,12 @@ h1{
 }
 .role{font-size:1.0625rem;font-weight:500;color:var(--muted);margin:.75rem 0 0}
 
-/* kontakt přes celou šířku, bez zaoblení */
+/* kontakt přes celou šířku, bez zaoblení, vše na střed pod sebou */
 .contact{background:var(--green);color:var(--bg);padding:2.5rem 1.5rem;text-align:center}
 .contact .inner{max-width:64rem;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:.5rem}
 .contact a.line{font-size:clamp(1.15rem,4.5vw,1.5rem);font-weight:600;text-decoration:none;padding:.4rem 0;overflow-wrap:anywhere}
 .contact a.line:hover{text-decoration:underline;text-underline-offset:.3em}
-.social{display:flex;gap:1rem;margin-top:.75rem}
+.social{display:flex;flex-direction:row;justify-content:center;gap:1rem;margin-top:.75rem}
 .social a{
   width:3rem;height:3rem;display:grid;place-items:center;border-radius:50%;
   border:2px solid rgba(246,243,236,.5);color:var(--bg);
@@ -66,9 +65,7 @@ footer p{margin:0}
   .role{font-size:1.375rem;margin-top:1rem}
   .portrait{margin-bottom:2.25rem}
   .contact{padding:3.5rem 2rem}
-  .contact .inner{flex-direction:row;justify-content:center;gap:3rem}
   .contact a.line{font-size:1.5rem}
-  .social{margin-top:0}
 }
 
 /* PC */
@@ -78,7 +75,6 @@ footer p{margin:0}
   h1{font-size:clamp(5rem,6vw,6.5rem)}
   .role{font-size:1.625rem}
   .contact{padding:4.5rem 2rem}
-  .contact .inner{gap:5rem}
   .contact a.line{font-size:1.875rem}
   .social a{width:3.5rem;height:3.5rem}
   .social svg{width:1.6rem;height:1.6rem}
@@ -89,13 +85,15 @@ footer p{margin:0}
 <body>
 
 <main>
-  <!-- Fotku nahraď: <img src="foto.jpg" alt="Josef Krubner"> místo <span> -->
-  <figure class="portrait" style="margin-top:0" aria-label="Místo pro fotografii"><img src="foto.webp" alt="Josef Krubner"></figure>
-
-  <h1>Josef Krubner</h1>
+  <div class="identity">
+    <figure class="portrait"><img src="foto.webp" alt="Josef Krubner"></figure>
+    <h1>Josef Krubner</h1>
+  </div>
   <p class="role">trenér, lektor a výživový poradce</p>
+</main>
 
-  <section class="contact" aria-label="Kontakt">
+<section class="contact" aria-label="Kontakt">
+  <div class="inner">
     <a class="line" href="mailto:kontakt@josefkrubner.cz">kontakt@josefkrubner.cz</a>
     <a class="line" href="tel:+420721975320">+420 721 975 320</a>
     <div class="social">
@@ -106,13 +104,13 @@ footer p{margin:0}
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.3 0-3.9 1.4-3.9 4v2.2H8V13.5h2.5V21h3z"/></svg>
       </a>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer>
   <p>© 2026 Josef Krubner. IČO: 17901731.</p>
-<p>Fyzická osoba zapsaná v živnostenském rejstříku od 4. 1. 2023</p>
-<p>Evidující úřad: Městský úřad Dobříš</p>
+  <p>Fyzická osoba zapsaná v živnostenském rejstříku od 4. 1. 2023</p>
+  <p>Evidující úřad: Městský úřad Dobříš</p>
 </footer>
 
 </body>
